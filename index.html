@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCM Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-gears"></i>
+        <h2>PCM Manager</h2>
+    </div>
+
+    <ul>
+
+        <li class="active">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </li>
+
+        <li>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            Ordem de Serviço
+        </li>
+
+        <li>
+            <i class="fa-solid fa-industry"></i>
+            Equipamentos
+        </li>
+
+        <li>
+            <i class="fa-solid fa-clipboard-check"></i>
+            Checklists
+        </li>
+
+        <li>
+            <i class="fa-solid fa-file-lines"></i>
+            Relatórios
+        </li>
+
+        <li>
+            <i class="fa-solid fa-chart-column"></i>
+            Indicadores
+        </li>
+
+        <li>
+            <i class="fa-solid fa-gear"></i>
+            Configurações
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Dashboard PCM</h1>
+
+<div class="user">
+<i class="fa-solid fa-user"></i>
+Administrador
+</div>
+
+</header>
+
+<section class="cards">
+
+<div class="card">
+<h3>OS Abertas</h3>
+<span id="os-abertas">12</span>
+</div>
+
+<div class="card">
+<h3>OS Concluídas</h3>
+<span>46</span>
+</div>
+
+<div class="card">
+<h3>Preventivas</h3>
+<span>20</span>
+</div>
+
+<div class="card">
+<h3>Corretivas</h3>
+<span>26</span>
+</div>
+
+</section>
+
+<section class="formulario">
+
+<h2>Nova Ordem de Serviço</h2>
+
+<form id="formOS">
+
+<input
+type="text"
+placeholder="Equipamento"
+required>
+
+<select required>
+
+<option value="">Tipo</option>
+
+<option>Preventiva</option>
+
+<option>Corretiva</option>
+
+<option>Preditiva</option>
+
+</select>
+
+<select required>
+
+<option>Status</option>
+
+<option>Aberta</option>
+
+<option>Em andamento</option>
+
+<option>Concluída</option>
+
+</select>
+
+<textarea
+placeholder="Descrição"></textarea>
+
+<button>
+
+Salvar Ordem
+
+</button>
+
+</form>
+
+</section>
+
+<section class="tabela">
+
+<h2>Histórico</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nº</th>
+
+<th>Equipamento</th>
+
+<th>Tipo</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historico">
+
+<tr>
+
+<td>001</td>
+
+<td>Compressor 01</td>
+
+<td>Preventiva</td>
+
+<td>Concluída</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
